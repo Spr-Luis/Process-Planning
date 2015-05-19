@@ -12,5 +12,6 @@
 
 + (id)sharedManager;
 
+@property (nonatomic, retain) NSMutableDictionary *processList;
 
 @end

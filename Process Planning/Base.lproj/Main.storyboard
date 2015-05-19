@@ -256,7 +256,7 @@
         <!--Tiempos-->
         <scene sceneID="tvy-yt-n5R">
             <objects>
-                <viewController id="OOS-3t-5Fy" customClass="ProcessTimeSetupViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="idStory" id="OOS-3t-5Fy" customClass="ProcessTimeSetupViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8eG-f8-jW0"/>
                         <viewControllerLayoutGuide type="bottom" id="doI-g1-TIH"/>

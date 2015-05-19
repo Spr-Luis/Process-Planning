@@ -10,6 +10,8 @@
 
 @implementation ProcessManager
 
+@synthesize processList;
+
 #pragma mark Singleton Methods
 
 + (id)sharedManager {
@@ -23,7 +25,7 @@
 
 - (id)init {
     if (self = [super init]) {
-        
+        processList = [NSMutableDictionary dictionary];
     }
     return self;
 }
@@ -31,4 +33,5 @@
 - (void)dealloc {
     // Should never be called, but just here for clarity really.
 }
+
 @end

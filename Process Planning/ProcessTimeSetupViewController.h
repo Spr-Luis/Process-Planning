@@ -8,7 +8,9 @@
 
 #import "XLFormViewController.h"
 
-@interface ProcessTimeSetupViewController : XLFormViewController <XLFormRowDescriptorViewController,XLFormDescriptorDelegate>
+@interface ProcessTimeSetupViewController : XLFormViewController <XLFormDescriptorDelegate>
+
+@property (weak,nonatomic) NSString* processName;
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
 - (IBAction)saveAction:(UIBarButtonItem *)sender;

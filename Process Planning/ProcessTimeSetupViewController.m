@@ -8,6 +8,7 @@
 
 #import "ProcessTimeSetupViewController.h"
 #import "XLForm.h"
+#import "ProcessManager.h"
 
 @interface ProcessTimeSetupViewController ()
 
@@ -15,18 +16,17 @@
 
 @implementation ProcessTimeSetupViewController
 
-@synthesize rowDescriptor = _rowDescriptor;
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    ProcessManager* manager = [ProcessManager sharedManager];
+    NSLog(@"\n\n%@\n\n",manager.processList);
 
-
+    self.title = self.processName;
+    
     XLFormDescriptor * form;
     XLFormSectionDescriptor * section;
     XLFormRowDescriptor * row;
-    
-    
     
     form = [XLFormDescriptor formDescriptorWithTitle:@"processTimeSetup"];
     
@@ -100,8 +100,9 @@
 }
 
 - (IBAction)saveAction:(UIBarButtonItem *)sender {
-    NSLog(@"%@",[self formValues]);
-    self.rowDescriptor.value = [NSString stringWithFormat:@"Listo"];
+    
+    ProcessManager* manager = [ProcessManager sharedManager];
+    [manager.processList setObject:[self formValues] forKey:self.processName];
     [self.navigationController popViewControllerAnimated:YES];
 }
 @end

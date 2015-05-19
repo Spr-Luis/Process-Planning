@@ -9,7 +9,7 @@
 #import "ProcessListViewController.h"
 #import "XLForm.h"
 #import "ProcessTimeSetupViewController.h"
-
+#import "ProcessManager.h"
 
 
 @interface ProcessListViewController ()
@@ -21,6 +21,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    ProcessManager *manager = [ProcessManager sharedManager];
+    manager = [manager init];
+    
     XLFormDescriptor * form;
     XLFormSectionDescriptor * section;
     
@@ -33,7 +36,7 @@
     self.processList = [NSMutableArray array];
     
     for (int i = 0; i < self.noProcess; i++) {
-        XLFormRowDescriptor* row = [XLFormRowDescriptor formRowDescriptorWithTag:[NSString stringWithFormat:@"setupProcess%d",i] rowType:XLFormRowDescriptorTypeSelectorPush title:[NSString stringWithFormat:@"Proceso %d",i+1]];
+        XLFormRowDescriptor* row = [XLFormRowDescriptor formRowDescriptorWithTag:[NSString stringWithFormat:@"%d",i] rowType:XLFormRowDescriptorTypeSelectorPush title:[NSString stringWithFormat:@"Proceso %d",i+1]];
         row.action.formSegueIdenfifier = @"processTimeSetup";
         row.value = [NSString stringWithFormat:@"Configurar"];
 
@@ -46,14 +49,15 @@
 
 
 
-/*
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"processTimeSetup"]) {
+        ProcessTimeSetupViewController *vc = segue.destinationViewController;
+        vc.processName = [NSString stringWithFormat:@"Proceso %ld",[[(XLFormRowDescriptor*)sender tag] integerValue]+1];
+    }
 }
-*/
+
 
 @end
