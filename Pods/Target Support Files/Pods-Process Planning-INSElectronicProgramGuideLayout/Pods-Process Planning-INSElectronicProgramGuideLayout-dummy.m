@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_Process_Planning_INSElectronicProgramGuideLayout : NSObject
+@end
+@implementation PodsDummy_Pods_Process_Planning_INSElectronicProgramGuideLayout
+@end
