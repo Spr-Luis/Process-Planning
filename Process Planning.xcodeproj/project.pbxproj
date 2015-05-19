@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A0107DD11B0BAC76007B94C6 /* ProcessManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A0107DD01B0BAC76007B94C6 /* ProcessManager.m */; };
+		A01FE4391B0938FA00E81F0B /* SetupPPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A01FE4381B0938FA00E81F0B /* SetupPPViewController.m */; };
+		A01FE43E1B0942CD00E81F0B /* SwipeView.m in Sources */ = {isa = PBXBuildFile; fileRef = A01FE43D1B0942CD00E81F0B /* SwipeView.m */; };
+		A02B23291B0B780500A66981 /* ProcessTimeSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A02B23281B0B780500A66981 /* ProcessTimeSetupViewController.m */; };
 		A05DD8151B0925670045D2F9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A05DD8141B0925670045D2F9 /* main.m */; };
 		A05DD8181B0925670045D2F9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A05DD8171B0925670045D2F9 /* AppDelegate.m */; };
 		A05DD81B1B0925670045D2F9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A05DD81A1B0925670045D2F9 /* ViewController.m */; };
@@ -14,6 +18,7 @@
 		A05DD8201B0925670045D2F9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A05DD81F1B0925670045D2F9 /* Images.xcassets */; };
 		A05DD8231B0925670045D2F9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A05DD8211B0925670045D2F9 /* LaunchScreen.xib */; };
 		A05DD82F1B0925670045D2F9 /* Process_PlanningTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A05DD82E1B0925670045D2F9 /* Process_PlanningTests.m */; };
+		A0BCAE511B0A592E00F431E7 /* ProcessListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BCAE501B0A592E00F431E7 /* ProcessListViewController.m */; };
 		D9B8BE5880AF913E0CBF4AF8 /* libPods-Process Planning.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F74E838B9081EA3EAD80A848 /* libPods-Process Planning.a */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +33,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A0107DCF1B0BAC76007B94C6 /* ProcessManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProcessManager.h; sourceTree = "<group>"; };
+		A0107DD01B0BAC76007B94C6 /* ProcessManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProcessManager.m; sourceTree = "<group>"; };
+		A01FE4371B0938FA00E81F0B /* SetupPPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetupPPViewController.h; sourceTree = "<group>"; };
+		A01FE4381B0938FA00E81F0B /* SetupPPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetupPPViewController.m; sourceTree = "<group>"; };
+		A01FE43C1B0942CD00E81F0B /* SwipeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeView.h; sourceTree = "<group>"; };
+		A01FE43D1B0942CD00E81F0B /* SwipeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeView.m; sourceTree = "<group>"; };
+		A02B23271B0B780500A66981 /* ProcessTimeSetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProcessTimeSetupViewController.h; sourceTree = "<group>"; };
+		A02B23281B0B780500A66981 /* ProcessTimeSetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProcessTimeSetupViewController.m; sourceTree = "<group>"; };
 		A05DD80F1B0925670045D2F9 /* Process Planning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Process Planning.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A05DD8131B0925670045D2F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A05DD8141B0925670045D2F9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -41,6 +54,8 @@
 		A05DD8281B0925670045D2F9 /* Process PlanningTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Process PlanningTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A05DD82D1B0925670045D2F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A05DD82E1B0925670045D2F9 /* Process_PlanningTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Process_PlanningTests.m; sourceTree = "<group>"; };
+		A0BCAE4F1B0A592E00F431E7 /* ProcessListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProcessListViewController.h; sourceTree = "<group>"; };
+		A0BCAE501B0A592E00F431E7 /* ProcessListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProcessListViewController.m; sourceTree = "<group>"; };
 		A38D0E2FF5DA86A1E8A51624 /* Pods-Process Planning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Process Planning.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Process Planning/Pods-Process Planning.debug.xcconfig"; sourceTree = "<group>"; };
 		F391FB89EEC914A578D7DBFC /* Pods-Process Planning.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Process Planning.release.xcconfig"; path = "Pods/Target Support Files/Pods-Process Planning/Pods-Process Planning.release.xcconfig"; sourceTree = "<group>"; };
 		F74E838B9081EA3EAD80A848 /* libPods-Process Planning.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Process Planning.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +88,50 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A0107DCE1B0BABE9007B94C6 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				A0107DCF1B0BAC76007B94C6 /* ProcessManager.h */,
+				A0107DD01B0BAC76007B94C6 /* ProcessManager.m */,
+			);
+			name = Class;
+			sourceTree = "<group>";
+		};
+		A01FE4361B0938D600E81F0B /* SetupPPViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A01FE4371B0938FA00E81F0B /* SetupPPViewController.h */,
+				A01FE4381B0938FA00E81F0B /* SetupPPViewController.m */,
+			);
+			name = SetupPPViewController;
+			sourceTree = "<group>";
+		};
+		A01FE43A1B0942BC00E81F0B /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				A01FE43B1B0942C200E81F0B /* SwipeView */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		A01FE43B1B0942C200E81F0B /* SwipeView */ = {
+			isa = PBXGroup;
+			children = (
+				A01FE43C1B0942CD00E81F0B /* SwipeView.h */,
+				A01FE43D1B0942CD00E81F0B /* SwipeView.m */,
+			);
+			name = SwipeView;
+			sourceTree = "<group>";
+		};
+		A02B23261B0B77DA00A66981 /* ProcessTimeSetupViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A02B23271B0B780500A66981 /* ProcessTimeSetupViewController.h */,
+				A02B23281B0B780500A66981 /* ProcessTimeSetupViewController.m */,
+			);
+			name = ProcessTimeSetupViewController;
+			sourceTree = "<group>";
+		};
 		A05DD8061B0925670045D2F9 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +155,8 @@
 		A05DD8111B0925670045D2F9 /* Process Planning */ = {
 			isa = PBXGroup;
 			children = (
+				A0107DCE1B0BABE9007B94C6 /* Class */,
+				A01FE43A1B0942BC00E81F0B /* Library */,
 				A05DD8161B0925670045D2F9 /* AppDelegate.h */,
 				A05DD8171B0925670045D2F9 /* AppDelegate.m */,
 				A05DD8381B09256C0045D2F9 /* ViewControllers */,
@@ -136,6 +197,9 @@
 		A05DD8381B09256C0045D2F9 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				A02B23261B0B77DA00A66981 /* ProcessTimeSetupViewController */,
+				A0BCAE4B1B0A52FE00F431E7 /* ProcessListViewController */,
+				A01FE4361B0938D600E81F0B /* SetupPPViewController */,
 				A05DD8391B0925760045D2F9 /* WalkhtroughViewController */,
 			);
 			name = ViewControllers;
@@ -148,6 +212,15 @@
 				A05DD81A1B0925670045D2F9 /* ViewController.m */,
 			);
 			name = WalkhtroughViewController;
+			sourceTree = "<group>";
+		};
+		A0BCAE4B1B0A52FE00F431E7 /* ProcessListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A0BCAE4F1B0A592E00F431E7 /* ProcessListViewController.h */,
+				A0BCAE501B0A592E00F431E7 /* ProcessListViewController.m */,
+			);
+			name = ProcessListViewController;
 			sourceTree = "<group>";
 		};
 		A8E7507DCD9868BACB76F986 /* Pods */ = {
@@ -296,7 +369,12 @@
 			files = (
 				A05DD81B1B0925670045D2F9 /* ViewController.m in Sources */,
 				A05DD8181B0925670045D2F9 /* AppDelegate.m in Sources */,
+				A0BCAE511B0A592E00F431E7 /* ProcessListViewController.m in Sources */,
+				A01FE4391B0938FA00E81F0B /* SetupPPViewController.m in Sources */,
+				A02B23291B0B780500A66981 /* ProcessTimeSetupViewController.m in Sources */,
+				A0107DD11B0BAC76007B94C6 /* ProcessManager.m in Sources */,
 				A05DD8151B0925670045D2F9 /* main.m in Sources */,
+				A01FE43E1B0942CD00E81F0B /* SwipeView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +506,17 @@
 				INFOPLIST_FILE = "Process Planning/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"Pods-Process Planning-INSElectronicProgramGuideLayout\"",
+					"-l\"Pods-Process Planning-XLForm\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -440,6 +529,17 @@
 				INFOPLIST_FILE = "Process Planning/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-l\"Pods-Process Planning-INSElectronicProgramGuideLayout\"",
+					"-l\"Pods-Process Planning-XLForm\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"UIKit\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
