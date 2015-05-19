@@ -11,6 +11,7 @@
 @interface ProcessTimeSetupViewController : XLFormViewController <XLFormDescriptorDelegate>
 
 @property (weak,nonatomic) NSString* processName;
+@property (nonatomic) NSInteger tag;
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
 - (IBAction)saveAction:(UIBarButtonItem *)sender;

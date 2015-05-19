@@ -47,6 +47,18 @@
     
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:true];
+    
+    for (NSString *status in [[self formValues] allValues]) {
+        if ([status isEqualToString:@"Configurar"]) {
+            return;
+        }else{
+            self.doneProcessButton.hidden = false;
+        }
+    }
+    
+}
 
 
 
@@ -54,10 +66,27 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"processTimeSetup"]) {
+        
+        [[NSNotificationCenter defaultCenter] removeObserver:self];
+        
         ProcessTimeSetupViewController *vc = segue.destinationViewController;
-        vc.processName = [NSString stringWithFormat:@"Proceso %ld",[[(XLFormRowDescriptor*)sender tag] integerValue]+1];
+        vc.tag = [[(XLFormRowDescriptor*)sender tag] integerValue];
+        
+        NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+        [center addObserverForName:[NSString stringWithFormat:@"Proceso %ld",[[(XLFormRowDescriptor*)sender tag] integerValue]+1]
+                            object:nil
+                             queue:nil
+                        usingBlock:^(NSNotification *notification){
+
+                            NSLog(@"Notification: %@",notification.object);
+                            XLFormRowDescriptor *rowUpdate = [self.form formRowWithTag:notification.object];
+                            rowUpdate.value = [NSString stringWithFormat:@"Listo"];
+                            
+                        }];
     }
 }
 
 
+- (IBAction)doneProcessAction:(UIButton *)sender {
+}
 @end

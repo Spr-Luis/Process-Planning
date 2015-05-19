@@ -107,13 +107,6 @@
                                                     <action selector="segmentedButton:" destination="XBr-TP-FCz" eventType="valueChanged" id="e76-Ur-hPF"/>
                                                 </connections>
                                             </segmentedControl>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dashboard" translatesAutoresizingMaskIntoConstraints="NO" id="zC7-CT-CHq">
-                                                <rect key="frame" x="250" y="8" width="100" height="100"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="100" id="eIZ-id-3Jl"/>
-                                                    <constraint firstAttribute="width" constant="100" id="tBL-kw-blG"/>
-                                                </constraints>
-                                            </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qZz-1N-29Z">
                                                 <rect key="frame" x="278" y="256" width="45" height="45"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -122,6 +115,13 @@
                                                     <constraint firstAttribute="width" constant="45" id="nXX-Hi-fpN"/>
                                                 </constraints>
                                             </view>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cpu" translatesAutoresizingMaskIntoConstraints="NO" id="zC7-CT-CHq">
+                                                <rect key="frame" x="250" y="8" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="eIZ-id-3Jl"/>
+                                                    <constraint firstAttribute="width" constant="100" id="tBL-kw-blG"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -230,6 +230,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="doneProcessAction:" destination="Mbi-ON-nqw" eventType="touchUpInside" id="i4U-pL-E1L"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -245,6 +248,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Procesos" id="l0W-K4-owR"/>
                     <connections>
+                        <outlet property="doneProcessButton" destination="XAG-AQ-zfE" id="Ycl-zf-1W9"/>
                         <outlet property="tableView" destination="S20-hv-h1F" id="GOG-Pr-BAf"/>
                         <segue destination="OOS-3t-5Fy" kind="show" identifier="processTimeSetup" id="6ew-7R-q8L"/>
                     </connections>
@@ -315,6 +319,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Dashboard" width="361" height="361"/>
+        <image name="cpu" width="128" height="128"/>
     </resources>
 </document>
