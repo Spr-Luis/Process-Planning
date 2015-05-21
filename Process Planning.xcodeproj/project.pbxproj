@@ -11,6 +11,7 @@
 		A01FE4391B0938FA00E81F0B /* SetupPPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A01FE4381B0938FA00E81F0B /* SetupPPViewController.m */; };
 		A01FE43E1B0942CD00E81F0B /* SwipeView.m in Sources */ = {isa = PBXBuildFile; fileRef = A01FE43D1B0942CD00E81F0B /* SwipeView.m */; };
 		A02B23291B0B780500A66981 /* ProcessTimeSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A02B23281B0B780500A66981 /* ProcessTimeSetupViewController.m */; };
+		A035DB9F1B0D905F0051743B /* FCFS_Algorithm.m in Sources */ = {isa = PBXBuildFile; fileRef = A035DB9E1B0D905F0051743B /* FCFS_Algorithm.m */; };
 		A05DD8151B0925670045D2F9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A05DD8141B0925670045D2F9 /* main.m */; };
 		A05DD8181B0925670045D2F9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A05DD8171B0925670045D2F9 /* AppDelegate.m */; };
 		A05DD81B1B0925670045D2F9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A05DD81A1B0925670045D2F9 /* ViewController.m */; };
@@ -18,6 +19,27 @@
 		A05DD8201B0925670045D2F9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A05DD81F1B0925670045D2F9 /* Images.xcassets */; };
 		A05DD8231B0925670045D2F9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A05DD8211B0925670045D2F9 /* LaunchScreen.xib */; };
 		A05DD82F1B0925670045D2F9 /* Process_PlanningTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A05DD82E1B0925670045D2F9 /* Process_PlanningTests.m */; };
+		A073C9361B0C465D008184D9 /* ProcessTimelineCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A073C9351B0C465D008184D9 /* ProcessTimelineCollectionViewController.m */; };
+		A073C9601B0C4E1D008184D9 /* ISDashedLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = A073C9431B0C4E1D008184D9 /* ISDashedLineView.m */; };
+		A073C9611B0C4E1D008184D9 /* ISCurrentTimeGridlineView.m in Sources */ = {isa = PBXBuildFile; fileRef = A073C9451B0C4E1D008184D9 /* ISCurrentTimeGridlineView.m */; };
+		A073C9621B0C4E1D008184D9 /* ISEPGCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A073C9471B0C4E1D008184D9 /* ISEPGCell.m */; };
+		A073C9631B0C4E1D008184D9 /* ISEPGCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A073C9481B0C4E1D008184D9 /* ISEPGCell.xib */; };
+		A073C9641B0C4E1D008184D9 /* ISCurrentTimeIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = A073C94A1B0C4E1D008184D9 /* ISCurrentTimeIndicatorView.m */; };
+		A073C9651B0C4E1D008184D9 /* ISCurrentTimeIndicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A073C94B1B0C4E1D008184D9 /* ISCurrentTimeIndicatorView.xib */; };
+		A073C9661B0C4E1D008184D9 /* ISSectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = A073C94D1B0C4E1D008184D9 /* ISSectionHeader.m */; };
+		A073C9671B0C4E1D008184D9 /* ISSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = A073C94E1B0C4E1D008184D9 /* ISSectionHeader.xib */; };
+		A073C9681B0C4E1D008184D9 /* ISGridlineView.m in Sources */ = {isa = PBXBuildFile; fileRef = A073C9501B0C4E1D008184D9 /* ISGridlineView.m */; };
+		A073C9691B0C4E1D008184D9 /* ISHalfHourLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = A073C9521B0C4E1D008184D9 /* ISHalfHourLineView.m */; };
+		A073C96A1B0C4E1D008184D9 /* ISHeaderBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = A073C9541B0C4E1D008184D9 /* ISHeaderBackgroundView.m */; };
+		A073C96B1B0C4E1D008184D9 /* ISHourHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = A073C9561B0C4E1D008184D9 /* ISHourHeader.m */; };
+		A073C96C1B0C4E1D008184D9 /* ISHourHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = A073C9571B0C4E1D008184D9 /* ISHourHeader.xib */; };
+		A073C96D1B0C4E1D008184D9 /* ISFloatingCellOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = A073C9591B0C4E1D008184D9 /* ISFloatingCellOverlay.m */; };
+		A073C96E1B0C4E1D008184D9 /* ISFloatingCellOverlay.xib in Resources */ = {isa = PBXBuildFile; fileRef = A073C95A1B0C4E1D008184D9 /* ISFloatingCellOverlay.xib */; };
+		A073C96F1B0C4E1D008184D9 /* ISHourHeaderBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = A073C95C1B0C4E1D008184D9 /* ISHourHeaderBackgroundView.m */; };
+		A073C9701B0C4E1D008184D9 /* ISFloatingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A073C95E1B0C4E1D008184D9 /* ISFloatingCell.m */; };
+		A073C9711B0C4E1D008184D9 /* ISFloatingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A073C95F1B0C4E1D008184D9 /* ISFloatingCell.xib */; };
+		A0A6E0441B0D2D2400CA9A4D /* Process.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A6E0431B0D2D2400CA9A4D /* Process.m */; };
+		A0A6E0481B0D318B00CA9A4D /* Execution.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A6E0471B0D318B00CA9A4D /* Execution.m */; };
 		A0BCAE511B0A592E00F431E7 /* ProcessListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BCAE501B0A592E00F431E7 /* ProcessListViewController.m */; };
 		D9B8BE5880AF913E0CBF4AF8 /* libPods-Process Planning.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F74E838B9081EA3EAD80A848 /* libPods-Process Planning.a */; };
 /* End PBXBuildFile section */
@@ -41,6 +63,8 @@
 		A01FE43D1B0942CD00E81F0B /* SwipeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeView.m; sourceTree = "<group>"; };
 		A02B23271B0B780500A66981 /* ProcessTimeSetupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProcessTimeSetupViewController.h; sourceTree = "<group>"; };
 		A02B23281B0B780500A66981 /* ProcessTimeSetupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProcessTimeSetupViewController.m; sourceTree = "<group>"; };
+		A035DB9D1B0D905F0051743B /* FCFS_Algorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCFS_Algorithm.h; sourceTree = "<group>"; };
+		A035DB9E1B0D905F0051743B /* FCFS_Algorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCFS_Algorithm.m; sourceTree = "<group>"; };
 		A05DD80F1B0925670045D2F9 /* Process Planning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Process Planning.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A05DD8131B0925670045D2F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A05DD8141B0925670045D2F9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -54,6 +78,42 @@
 		A05DD8281B0925670045D2F9 /* Process PlanningTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Process PlanningTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A05DD82D1B0925670045D2F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A05DD82E1B0925670045D2F9 /* Process_PlanningTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Process_PlanningTests.m; sourceTree = "<group>"; };
+		A073C9341B0C465D008184D9 /* ProcessTimelineCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProcessTimelineCollectionViewController.h; sourceTree = "<group>"; };
+		A073C9351B0C465D008184D9 /* ProcessTimelineCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProcessTimelineCollectionViewController.m; sourceTree = "<group>"; };
+		A073C9421B0C4E1D008184D9 /* ISDashedLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISDashedLineView.h; sourceTree = "<group>"; };
+		A073C9431B0C4E1D008184D9 /* ISDashedLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISDashedLineView.m; sourceTree = "<group>"; };
+		A073C9441B0C4E1D008184D9 /* ISCurrentTimeGridlineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISCurrentTimeGridlineView.h; sourceTree = "<group>"; };
+		A073C9451B0C4E1D008184D9 /* ISCurrentTimeGridlineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISCurrentTimeGridlineView.m; sourceTree = "<group>"; };
+		A073C9461B0C4E1D008184D9 /* ISEPGCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISEPGCell.h; sourceTree = "<group>"; };
+		A073C9471B0C4E1D008184D9 /* ISEPGCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISEPGCell.m; sourceTree = "<group>"; };
+		A073C9481B0C4E1D008184D9 /* ISEPGCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ISEPGCell.xib; sourceTree = "<group>"; };
+		A073C9491B0C4E1D008184D9 /* ISCurrentTimeIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISCurrentTimeIndicatorView.h; sourceTree = "<group>"; };
+		A073C94A1B0C4E1D008184D9 /* ISCurrentTimeIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISCurrentTimeIndicatorView.m; sourceTree = "<group>"; };
+		A073C94B1B0C4E1D008184D9 /* ISCurrentTimeIndicatorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ISCurrentTimeIndicatorView.xib; sourceTree = "<group>"; };
+		A073C94C1B0C4E1D008184D9 /* ISSectionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISSectionHeader.h; sourceTree = "<group>"; };
+		A073C94D1B0C4E1D008184D9 /* ISSectionHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISSectionHeader.m; sourceTree = "<group>"; };
+		A073C94E1B0C4E1D008184D9 /* ISSectionHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ISSectionHeader.xib; sourceTree = "<group>"; };
+		A073C94F1B0C4E1D008184D9 /* ISGridlineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISGridlineView.h; sourceTree = "<group>"; };
+		A073C9501B0C4E1D008184D9 /* ISGridlineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISGridlineView.m; sourceTree = "<group>"; };
+		A073C9511B0C4E1D008184D9 /* ISHalfHourLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISHalfHourLineView.h; sourceTree = "<group>"; };
+		A073C9521B0C4E1D008184D9 /* ISHalfHourLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISHalfHourLineView.m; sourceTree = "<group>"; };
+		A073C9531B0C4E1D008184D9 /* ISHeaderBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISHeaderBackgroundView.h; sourceTree = "<group>"; };
+		A073C9541B0C4E1D008184D9 /* ISHeaderBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISHeaderBackgroundView.m; sourceTree = "<group>"; };
+		A073C9551B0C4E1D008184D9 /* ISHourHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISHourHeader.h; sourceTree = "<group>"; };
+		A073C9561B0C4E1D008184D9 /* ISHourHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISHourHeader.m; sourceTree = "<group>"; };
+		A073C9571B0C4E1D008184D9 /* ISHourHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ISHourHeader.xib; sourceTree = "<group>"; };
+		A073C9581B0C4E1D008184D9 /* ISFloatingCellOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISFloatingCellOverlay.h; sourceTree = "<group>"; };
+		A073C9591B0C4E1D008184D9 /* ISFloatingCellOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISFloatingCellOverlay.m; sourceTree = "<group>"; };
+		A073C95A1B0C4E1D008184D9 /* ISFloatingCellOverlay.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ISFloatingCellOverlay.xib; sourceTree = "<group>"; };
+		A073C95B1B0C4E1D008184D9 /* ISHourHeaderBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISHourHeaderBackgroundView.h; sourceTree = "<group>"; };
+		A073C95C1B0C4E1D008184D9 /* ISHourHeaderBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISHourHeaderBackgroundView.m; sourceTree = "<group>"; };
+		A073C95D1B0C4E1D008184D9 /* ISFloatingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISFloatingCell.h; sourceTree = "<group>"; };
+		A073C95E1B0C4E1D008184D9 /* ISFloatingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ISFloatingCell.m; sourceTree = "<group>"; };
+		A073C95F1B0C4E1D008184D9 /* ISFloatingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ISFloatingCell.xib; sourceTree = "<group>"; };
+		A0A6E0421B0D2D2400CA9A4D /* Process.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Process.h; sourceTree = "<group>"; };
+		A0A6E0431B0D2D2400CA9A4D /* Process.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Process.m; sourceTree = "<group>"; };
+		A0A6E0461B0D318B00CA9A4D /* Execution.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Execution.h; sourceTree = "<group>"; };
+		A0A6E0471B0D318B00CA9A4D /* Execution.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Execution.m; sourceTree = "<group>"; };
 		A0BCAE4F1B0A592E00F431E7 /* ProcessListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProcessListViewController.h; sourceTree = "<group>"; };
 		A0BCAE501B0A592E00F431E7 /* ProcessListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProcessListViewController.m; sourceTree = "<group>"; };
 		A38D0E2FF5DA86A1E8A51624 /* Pods-Process Planning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Process Planning.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Process Planning/Pods-Process Planning.debug.xcconfig"; sourceTree = "<group>"; };
@@ -91,8 +151,10 @@
 		A0107DCE1B0BABE9007B94C6 /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				A0107DCF1B0BAC76007B94C6 /* ProcessManager.h */,
-				A0107DD01B0BAC76007B94C6 /* ProcessManager.m */,
+				A035DB9C1B0D90330051743B /* FCFS_Algorithm */,
+				A0A6E0451B0D2EE100CA9A4D /* Execution */,
+				A0A6E0411B0D2D1700CA9A4D /* Process */,
+				A0A6E0401B0D2D0A00CA9A4D /* ProcessManager */,
 			);
 			name = Class;
 			sourceTree = "<group>";
@@ -130,6 +192,15 @@
 				A02B23281B0B780500A66981 /* ProcessTimeSetupViewController.m */,
 			);
 			name = ProcessTimeSetupViewController;
+			sourceTree = "<group>";
+		};
+		A035DB9C1B0D90330051743B /* FCFS_Algorithm */ = {
+			isa = PBXGroup;
+			children = (
+				A035DB9D1B0D905F0051743B /* FCFS_Algorithm.h */,
+				A035DB9E1B0D905F0051743B /* FCFS_Algorithm.m */,
+			);
+			name = FCFS_Algorithm;
 			sourceTree = "<group>";
 		};
 		A05DD8061B0925670045D2F9 = {
@@ -197,6 +268,7 @@
 		A05DD8381B09256C0045D2F9 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				A073C9331B0C463E008184D9 /* ProcessTimelineViewController */,
 				A02B23261B0B77DA00A66981 /* ProcessTimeSetupViewController */,
 				A0BCAE4B1B0A52FE00F431E7 /* ProcessListViewController */,
 				A01FE4361B0938D600E81F0B /* SetupPPViewController */,
@@ -212,6 +284,80 @@
 				A05DD81A1B0925670045D2F9 /* ViewController.m */,
 			);
 			name = WalkhtroughViewController;
+			sourceTree = "<group>";
+		};
+		A073C9331B0C463E008184D9 /* ProcessTimelineViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A073C9411B0C4E0E008184D9 /* Cells */,
+				A073C9341B0C465D008184D9 /* ProcessTimelineCollectionViewController.h */,
+				A073C9351B0C465D008184D9 /* ProcessTimelineCollectionViewController.m */,
+			);
+			name = ProcessTimelineViewController;
+			sourceTree = "<group>";
+		};
+		A073C9411B0C4E0E008184D9 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A073C9421B0C4E1D008184D9 /* ISDashedLineView.h */,
+				A073C9431B0C4E1D008184D9 /* ISDashedLineView.m */,
+				A073C9441B0C4E1D008184D9 /* ISCurrentTimeGridlineView.h */,
+				A073C9451B0C4E1D008184D9 /* ISCurrentTimeGridlineView.m */,
+				A073C9461B0C4E1D008184D9 /* ISEPGCell.h */,
+				A073C9471B0C4E1D008184D9 /* ISEPGCell.m */,
+				A073C9481B0C4E1D008184D9 /* ISEPGCell.xib */,
+				A073C9491B0C4E1D008184D9 /* ISCurrentTimeIndicatorView.h */,
+				A073C94A1B0C4E1D008184D9 /* ISCurrentTimeIndicatorView.m */,
+				A073C94B1B0C4E1D008184D9 /* ISCurrentTimeIndicatorView.xib */,
+				A073C94C1B0C4E1D008184D9 /* ISSectionHeader.h */,
+				A073C94D1B0C4E1D008184D9 /* ISSectionHeader.m */,
+				A073C94E1B0C4E1D008184D9 /* ISSectionHeader.xib */,
+				A073C94F1B0C4E1D008184D9 /* ISGridlineView.h */,
+				A073C9501B0C4E1D008184D9 /* ISGridlineView.m */,
+				A073C9511B0C4E1D008184D9 /* ISHalfHourLineView.h */,
+				A073C9521B0C4E1D008184D9 /* ISHalfHourLineView.m */,
+				A073C9531B0C4E1D008184D9 /* ISHeaderBackgroundView.h */,
+				A073C9541B0C4E1D008184D9 /* ISHeaderBackgroundView.m */,
+				A073C9551B0C4E1D008184D9 /* ISHourHeader.h */,
+				A073C9561B0C4E1D008184D9 /* ISHourHeader.m */,
+				A073C9571B0C4E1D008184D9 /* ISHourHeader.xib */,
+				A073C9581B0C4E1D008184D9 /* ISFloatingCellOverlay.h */,
+				A073C9591B0C4E1D008184D9 /* ISFloatingCellOverlay.m */,
+				A073C95A1B0C4E1D008184D9 /* ISFloatingCellOverlay.xib */,
+				A073C95B1B0C4E1D008184D9 /* ISHourHeaderBackgroundView.h */,
+				A073C95C1B0C4E1D008184D9 /* ISHourHeaderBackgroundView.m */,
+				A073C95D1B0C4E1D008184D9 /* ISFloatingCell.h */,
+				A073C95E1B0C4E1D008184D9 /* ISFloatingCell.m */,
+				A073C95F1B0C4E1D008184D9 /* ISFloatingCell.xib */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		A0A6E0401B0D2D0A00CA9A4D /* ProcessManager */ = {
+			isa = PBXGroup;
+			children = (
+				A0107DCF1B0BAC76007B94C6 /* ProcessManager.h */,
+				A0107DD01B0BAC76007B94C6 /* ProcessManager.m */,
+			);
+			name = ProcessManager;
+			sourceTree = "<group>";
+		};
+		A0A6E0411B0D2D1700CA9A4D /* Process */ = {
+			isa = PBXGroup;
+			children = (
+				A0A6E0421B0D2D2400CA9A4D /* Process.h */,
+				A0A6E0431B0D2D2400CA9A4D /* Process.m */,
+			);
+			name = Process;
+			sourceTree = "<group>";
+		};
+		A0A6E0451B0D2EE100CA9A4D /* Execution */ = {
+			isa = PBXGroup;
+			children = (
+				A0A6E0461B0D318B00CA9A4D /* Execution.h */,
+				A0A6E0471B0D318B00CA9A4D /* Execution.m */,
+			);
+			name = Execution;
 			sourceTree = "<group>";
 		};
 		A0BCAE4B1B0A52FE00F431E7 /* ProcessListViewController */ = {
@@ -315,8 +461,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A05DD81E1B0925670045D2F9 /* Main.storyboard in Resources */,
+				A073C96C1B0C4E1D008184D9 /* ISHourHeader.xib in Resources */,
 				A05DD8231B0925670045D2F9 /* LaunchScreen.xib in Resources */,
+				A073C9671B0C4E1D008184D9 /* ISSectionHeader.xib in Resources */,
+				A073C96E1B0C4E1D008184D9 /* ISFloatingCellOverlay.xib in Resources */,
+				A073C9631B0C4E1D008184D9 /* ISEPGCell.xib in Resources */,
 				A05DD8201B0925670045D2F9 /* Images.xcassets in Resources */,
+				A073C9651B0C4E1D008184D9 /* ISCurrentTimeIndicatorView.xib in Resources */,
+				A073C9711B0C4E1D008184D9 /* ISFloatingCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,10 +519,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0A6E0481B0D318B00CA9A4D /* Execution.m in Sources */,
 				A05DD81B1B0925670045D2F9 /* ViewController.m in Sources */,
 				A05DD8181B0925670045D2F9 /* AppDelegate.m in Sources */,
+				A073C96B1B0C4E1D008184D9 /* ISHourHeader.m in Sources */,
+				A073C96D1B0C4E1D008184D9 /* ISFloatingCellOverlay.m in Sources */,
+				A073C9621B0C4E1D008184D9 /* ISEPGCell.m in Sources */,
+				A073C96F1B0C4E1D008184D9 /* ISHourHeaderBackgroundView.m in Sources */,
 				A0BCAE511B0A592E00F431E7 /* ProcessListViewController.m in Sources */,
+				A0A6E0441B0D2D2400CA9A4D /* Process.m in Sources */,
+				A073C9661B0C4E1D008184D9 /* ISSectionHeader.m in Sources */,
+				A073C96A1B0C4E1D008184D9 /* ISHeaderBackgroundView.m in Sources */,
+				A073C9641B0C4E1D008184D9 /* ISCurrentTimeIndicatorView.m in Sources */,
+				A073C9681B0C4E1D008184D9 /* ISGridlineView.m in Sources */,
+				A073C9691B0C4E1D008184D9 /* ISHalfHourLineView.m in Sources */,
+				A073C9611B0C4E1D008184D9 /* ISCurrentTimeGridlineView.m in Sources */,
+				A073C9601B0C4E1D008184D9 /* ISDashedLineView.m in Sources */,
+				A073C9701B0C4E1D008184D9 /* ISFloatingCell.m in Sources */,
 				A01FE4391B0938FA00E81F0B /* SetupPPViewController.m in Sources */,
+				A073C9361B0C465D008184D9 /* ProcessTimelineCollectionViewController.m in Sources */,
+				A035DB9F1B0D905F0051743B /* FCFS_Algorithm.m in Sources */,
 				A02B23291B0B780500A66981 /* ProcessTimeSetupViewController.m in Sources */,
 				A0107DD11B0BAC76007B94C6 /* ProcessManager.m in Sources */,
 				A05DD8151B0925670045D2F9 /* main.m in Sources */,

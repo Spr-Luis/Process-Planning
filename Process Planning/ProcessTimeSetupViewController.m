@@ -19,8 +19,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    ProcessManager* manager = [ProcessManager sharedManager];
-    NSLog(@"\n\n%@\n\n",manager.processList);
 
     self.processName = [NSString stringWithFormat:@"Proceso %ld",self.tag+1];
     self.title = self.processName;
@@ -49,16 +47,26 @@
     
     ProcessManager *managerProcess = [ProcessManager sharedManager];
     id obj = [[managerProcess.processList objectForKey:self.processName] objectForKey:@"times"];
-    NSLog(@"OBJ -> %@",obj);
     
     if (obj != nil) {
 
-        for (NSString *tag in obj) {
+        for (int i = 0; i < [obj count]; i++) {
             
-            if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad){
-                row = [XLFormRowDescriptor formRowDescriptorWithTag:@"time" rowType:XLFormRowDescriptorTypeSelectorPopover title:@"CPU"];
+            NSString *tag = [obj objectAtIndex:i];
+            
+            if (i % 2) {
+                if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad){
+                    row = [XLFormRowDescriptor formRowDescriptorWithTag:@"time" rowType:XLFormRowDescriptorTypeSelectorPopover title:@"E/S"];
+                }else{
+                    row = [XLFormRowDescriptor formRowDescriptorWithTag:@"time" rowType:XLFormRowDescriptorTypeSelectorActionSheet title:@"E/S"];
+                }
             }else{
-                row = [XLFormRowDescriptor formRowDescriptorWithTag:@"time" rowType:XLFormRowDescriptorTypeSelectorActionSheet title:@"CPU"];
+            
+                if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad){
+                    row = [XLFormRowDescriptor formRowDescriptorWithTag:@"time" rowType:XLFormRowDescriptorTypeSelectorPopover title:@"CPU"];
+                }else{
+                    row = [XLFormRowDescriptor formRowDescriptorWithTag:@"time" rowType:XLFormRowDescriptorTypeSelectorActionSheet title:@"CPU"];
+                }
             }
             row.selectorOptions = @[@"1", @"2", @"5", @"10", @"15"];
             row.value = [NSString stringWithFormat:@"%@",tag];

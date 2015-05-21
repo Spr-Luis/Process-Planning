@@ -11,6 +11,8 @@
 #import "ProcessTimeSetupViewController.h"
 #import "ProcessManager.h"
 
+#import "FCFS_Algorithm.h"
+
 
 @interface ProcessListViewController ()
 
@@ -33,7 +35,6 @@
     section.footerTitle = [NSString stringWithFormat:@"Hay un total de %ld proceso(s), los cuales tendrás que indicar los tiempos de ejecución en el CPU y de E/S.",(long)self.noProcess];
     [form addFormSection:section];
 
-    self.processList = [NSMutableArray array];
     
     for (int i = 0; i < self.noProcess; i++) {
         XLFormRowDescriptor* row = [XLFormRowDescriptor formRowDescriptorWithTag:[NSString stringWithFormat:@"%d",i] rowType:XLFormRowDescriptorTypeSelectorPush title:[NSString stringWithFormat:@"Proceso %d",i+1]];
@@ -45,22 +46,28 @@
 
     self.form = form;
     
+    self.doneProcessButton.hidden = true;
+
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:true];
     
+    BOOL statusButton = true;
+    
     for (NSString *status in [[self formValues] allValues]) {
         if ([status isEqualToString:@"Configurar"]) {
+            statusButton = true;
             return;
-        }else{
-            self.doneProcessButton.hidden = false;
+        }
+        
+        if ([status isEqualToString:@"Listo"]) {
+            statusButton = false;
         }
     }
     
+    self.doneProcessButton.hidden = statusButton;
 }
-
-
 
 #pragma mark - Navigation
 
@@ -78,7 +85,6 @@
                              queue:nil
                         usingBlock:^(NSNotification *notification){
 
-                            NSLog(@"Notification: %@",notification.object);
                             XLFormRowDescriptor *rowUpdate = [self.form formRowWithTag:notification.object];
                             rowUpdate.value = [NSString stringWithFormat:@"Listo"];
                             
@@ -88,5 +94,12 @@
 
 
 - (IBAction)doneProcessAction:(UIButton *)sender {
+    //NSLog(@"\n\n\n\n\n\n\n\n");
+    //NSLog(@"%@",[[[ProcessManager sharedManager] processList]allKeys]);
+    
+    for (NSString *nameKey in [[[ProcessManager sharedManager] processList]allKeys]) {
+        
+        [FCFS_Algorithm setupProcessWithName:nameKey info:[[[ProcessManager sharedManager] processList]objectForKey:nameKey]];
+    }
 }
 @end

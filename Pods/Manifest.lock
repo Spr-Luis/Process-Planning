@@ -1,13 +1,16 @@
 PODS:
   - INSElectronicProgramGuideLayout (1.1.0)
+  - UIColor+MLPFlatColors (1.0)
   - XLForm (2.2.0)
 
 DEPENDENCIES:
   - INSElectronicProgramGuideLayout
+  - UIColor+MLPFlatColors (~> 1.0)
   - XLForm
 
 SPEC CHECKSUMS:
   INSElectronicProgramGuideLayout: eef4f7ab59fdad29fff38bfffd851631779e364c
+  UIColor+MLPFlatColors: 14deb8f28da06ab8918c14231d4ff49ca7cd384a
   XLForm: 799e61ef230f519914e722bf032b19a597223c19
 
 COCOAPODS: 0.37.1

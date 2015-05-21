@@ -11,7 +11,6 @@
 @interface ProcessListViewController : XLFormViewController
 
 @property NSInteger noProcess;
-@property (nonatomic,strong) NSMutableArray *processList;
 @property (weak, nonatomic) IBOutlet UIButton *doneProcessButton;
 - (IBAction)doneProcessAction:(UIButton *)sender;
 

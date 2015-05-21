@@ -291,11 +291,32 @@
                     </navigationItem>
                     <connections>
                         <outlet property="saveButton" destination="k3n-XQ-rNU" id="PAu-cf-zDY"/>
+                        <segue destination="rd6-ez-tWS" kind="show" id="tUJ-bZ-n9k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I8t-3a-cKi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3242" y="325"/>
+        </scene>
+        <!--Collection View Controller-->
+        <scene sceneID="LYo-ld-G1q">
+            <objects>
+                <collectionViewController id="rd6-ez-tWS" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="3mo-aX-353">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <collectionViewLayout key="collectionViewLayout" id="Kk7-Lc-iew" customClass="INSElectronicProgramGuideLayout"/>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="rd6-ez-tWS" id="R8c-8b-53R"/>
+                            <outlet property="delegate" destination="rd6-ez-tWS" id="0Sa-I0-29H"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yMU-gX-Lnf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3946" y="325"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mUq-Sf-YX7">
