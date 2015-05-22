@@ -12,6 +12,12 @@
 #define COCOAPODS_VERSION_MINOR_INSElectronicProgramGuideLayout 1
 #define COCOAPODS_VERSION_PATCH_INSElectronicProgramGuideLayout 0
 
+// MTDates
+#define COCOAPODS_POD_AVAILABLE_MTDates
+#define COCOAPODS_VERSION_MAJOR_MTDates 1
+#define COCOAPODS_VERSION_MINOR_MTDates 0
+#define COCOAPODS_VERSION_PATCH_MTDates 2
+
 // UIColor+MLPFlatColors
 #define COCOAPODS_POD_AVAILABLE_UIColor_MLPFlatColors
 #define COCOAPODS_VERSION_MAJOR_UIColor_MLPFlatColors 1

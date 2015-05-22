@@ -12,6 +12,11 @@
 
 @property (nonatomic, retain) NSDate *startDate;
 @property (nonatomic, retain) NSDate *endDate;
+
+@property (nonatomic) NSInteger startTime;
+@property (nonatomic) NSInteger endTime;
+@property (nonatomic) NSInteger durationTime;
+
 @property (nonatomic, retain) NSString *executionType;
 
 @end

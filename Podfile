@@ -6,6 +6,8 @@ target 'Process Planning' do
 pod 'INSElectronicProgramGuideLayout'
 pod 'XLForm'
 pod 'UIColor+MLPFlatColors', '~> 1.0'
+pod 'MTDates'
+
 end
 
 target 'Process PlanningTests' do

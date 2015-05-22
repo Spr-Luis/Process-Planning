@@ -7,8 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Execution.h"
+#import "Process.h"
 
 @interface FCFS_Algorithm : NSObject
 
-+(void)setupProcessWithName:(NSString*)name info:(NSDictionary *)processInfo;
++(NSArray*)FCFSWithProcessList:(NSDictionary *)info;
 @end

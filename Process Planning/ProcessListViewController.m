@@ -96,10 +96,12 @@
 - (IBAction)doneProcessAction:(UIButton *)sender {
     //NSLog(@"\n\n\n\n\n\n\n\n");
     //NSLog(@"%@",[[[ProcessManager sharedManager] processList]allKeys]);
-    
+    /*
     for (NSString *nameKey in [[[ProcessManager sharedManager] processList]allKeys]) {
         
         [FCFS_Algorithm setupProcessWithName:nameKey info:[[[ProcessManager sharedManager] processList]objectForKey:nameKey]];
-    }
+    }*/
+    
+    [FCFS_Algorithm FCFSWithProcessList:[[ProcessManager sharedManager] processList]];
 }
 @end
