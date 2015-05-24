@@ -128,108 +128,14 @@ NSString* const kProcessTimes = @"times";
     
 // Iteration of all process
     for (int i = 0; i < [allProcess count]; i++) {
-        
-        /*
-        if (i%2) {
-            // Impar
-            Process *processE_S = [allProcess objectAtIndex:i];
-            
-            if (i != 0) {
-                ((Execution*)[processE_S.exections objectAtIndex:i]).startTime = ((Execution*)[processE_S.exections objectAtIndex:i-1]).endTime;
-                ((Execution*)[processE_S.exections objectAtIndex:i]).endTime = ((Execution*)[processE_S.exections objectAtIndex:i]).startTime +((Execution*)[processE_S.exections objectAtIndex:i]).durationTime;
-            }
-            
-            
-        }else{
-            // Par
-            
-            Process *processA = [allProcess objectAtIndex:i];
-            if (i != [allProcess count]-1) {
-                Process *processB = [allProcess objectAtIndex:i+1];
-                
-                // CPU
-                ((Execution*)[processB.exections objectAtIndex:i]).startTime = ((Execution*)[[processA exections]objectAtIndex:i]).durationTime + ((Execution*)[[processA exections]objectAtIndex:i]).startTime;
-                ((Execution*)[processB.exections objectAtIndex:i]).endTime = ((Execution*)[[processB exections]objectAtIndex:i]).durationTime + ((Execution*)[[processB exections]objectAtIndex:i]).startTime;
-                
-                
-            }
-        }*/
-        
-        /*
-        Process *process_A = [allProcess objectAtIndex:i];
-        if (i != 0) {
-            ((Execution*)[process_A.exections objectAtIndex:i]).startTime = ((Execution*)[process_A.exections objectAtIndex:i-1]).endTime;
-            ((Execution*)[process_A.exections objectAtIndex:i]).endTime = ((Execution*)[process_A.exections objectAtIndex:i]).startTime +((Execution*)[process_A.exections objectAtIndex:i]).durationTime;
-        }
 
-        if (i != [allProcess count]-1) {
-            Process *process_B = [allProcess objectAtIndex:i+1];
-            
-            
-            if (i%2) {
-                // Impar
-                // E/S
-                if (i != 0) {
-                    ((Execution*)[process_B.exections objectAtIndex:i]).startTime = ((Execution*)[process_B.exections objectAtIndex:i-1]).endTime;
-                    ((Execution*)[process_B.exections objectAtIndex:i]).endTime = ((Execution*)[process_B.exections objectAtIndex:i]).startTime +((Execution*)[process_B.exections objectAtIndex:i]).durationTime;
-                }
-                
-            }else{
-                // Par
-                // CPU
-                ((Execution*)[process_B.exections objectAtIndex:i]).startTime = ((Execution*)[[process_A exections]objectAtIndex:i]).durationTime + ((Execution*)[[process_A exections]objectAtIndex:i]).startTime;
-                ((Execution*)[process_B.exections objectAtIndex:i]).endTime = ((Execution*)[[process_B exections]objectAtIndex:i]).durationTime + ((Execution*)[[process_B exections]objectAtIndex:i]).startTime;
-            }
-        }*/
         NSLog(@"*");
         NSLog(@"*");
         NSLog(@"*");
         NSLog(@"*");
         NSLog(@"*");
         NSLog(@"*");
-        
-        /*
-        Process *process_A = [allProcess objectAtIndex:i];
-        
-        if (i != [allProcess count]-1) {
-            Process *process_B = [allProcess objectAtIndex:i+1];
-                        
-            for (int k = 0; [process_A.exections count] >= [process_B.exections count]? k<[process_B.exections count] : k<[process_A.exections count]; k++) {
-                
-                if (k != 0) {
-                    ((Execution*)[process_A.exections objectAtIndex:k]).startTime = ((Execution*)[process_A.exections objectAtIndex:k-1]).endTime;
-                    ((Execution*)[process_A.exections objectAtIndex:k]).endTime = ((Execution*)[process_A.exections objectAtIndex:k]).startTime +((Execution*)[process_A.exections objectAtIndex:k]).durationTime;
-                }
-                
-                if (k%2) {
-                    // Impar
-                    // E/S
-                    
-                    
-                }else{
-                    // Par
-                    // CPU
-                    ((Execution*)[process_B.exections objectAtIndex:k]).startTime = ((Execution*)[[process_A exections]objectAtIndex:k]).durationTime + ((Execution*)[[process_A exections]objectAtIndex:k]).startTime;
-                    ((Execution*)[process_B.exections objectAtIndex:k]).endTime = ((Execution*)[[process_B exections]objectAtIndex:k]).durationTime + ((Execution*)[[process_B exections]objectAtIndex:k]).startTime;
-                    
-                    if (k != 0) {
-                        ((Execution*)[process_B.exections objectAtIndex:k]).startTime = ((Execution*)[process_B.exections objectAtIndex:k-1]).endTime;
-                        ((Execution*)[process_B.exections objectAtIndex:k]).endTime = ((Execution*)[process_B.exections objectAtIndex:k]).startTime +((Execution*)[process_B.exections objectAtIndex:k]).durationTime;
-                    }
-                }
-                
-                NSLog(@"Process A: %@",process_A.name);
-                NSLog(@"%@ ::: %ld -> %ld ::: %ld",((Execution*)[process_A.exections objectAtIndex:k]).executionType, (long)((Execution*)[process_A.exections objectAtIndex:k]).startTime,(long)((Execution*)[process_A.exections objectAtIndex:k]).endTime, (long)((Execution*)[process_A.exections objectAtIndex:k]).durationTime);
-                
-                NSLog(@"Process B: %@",process_B.name);
-                NSLog(@"%@ ::: %ld -> %ld ::: %ld",((Execution*)[process_B.exections objectAtIndex:k]).executionType, (long)((Execution*)[process_B.exections objectAtIndex:k]).startTime,(long)((Execution*)[process_B.exections objectAtIndex:k]).endTime, (long)((Execution*)[process_B.exections objectAtIndex:k]).durationTime);
 
-            }
-            
-            
-        }
-        
-    }*/
         
         Process *process_A = [allProcess objectAtIndex:i];
         
