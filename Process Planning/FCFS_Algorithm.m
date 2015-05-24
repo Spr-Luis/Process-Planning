@@ -17,7 +17,6 @@ NSString* const kProcessTimes = @"times";
 @implementation FCFS_Algorithm
 
 
-
 +(Process *)setupProcessTimeWithName:(NSString*)name info:(NSDictionary *)processInfo{
     
     
@@ -60,12 +59,12 @@ NSString* const kProcessTimes = @"times";
             }
         }
     }
-    
+    /*
     NSLog(@"Process Name: %@", process.name);
     
     for (Execution* ex in process.exections) {
         NSLog(@"%@ ::: %ld -> %ld ::: %ld", ex.executionType, (long)ex.startTime, (long)ex.endTime,(long)ex.durationTime);
-    }
+    }*/
     
     return process; 
 }
