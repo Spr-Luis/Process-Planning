@@ -94,14 +94,18 @@
 
 
 - (IBAction)doneProcessAction:(UIButton *)sender {
-    //NSLog(@"\n\n\n\n\n\n\n\n");
-    //NSLog(@"%@",[[[ProcessManager sharedManager] processList]allKeys]);
-    /*
-    for (NSString *nameKey in [[[ProcessManager sharedManager] processList]allKeys]) {
-        
-        [FCFS_Algorithm setupProcessWithName:nameKey info:[[[ProcessManager sharedManager] processList]objectForKey:nameKey]];
-    }*/
     
-    [FCFS_Algorithm FCFSWithProcessList:[[ProcessManager sharedManager] processList]];
+    NSArray *allProcess = [FCFS_Algorithm FCFSWithProcessList:[[ProcessManager sharedManager] processList]];
+    
+    for (Process *proc in allProcess) {
+        
+        NSLog(@"Process Name: %@", proc.name);
+        
+        for (Execution* ex in proc.exections) {
+            NSLog(@"%@ ::: %@ -> %@ ::: %ld", ex.executionType, ex.startDate, ex.endDate,(long)
+                  ex.durationTime);
+        }
+        
+    }
 }
 @end

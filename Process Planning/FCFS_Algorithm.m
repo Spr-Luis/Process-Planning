@@ -79,14 +79,14 @@ NSString* const kProcessTimes = @"times";
     
 // Iteration of all process
     for (int i = 0; i < [allProcess count]; i++) {
-
+/* 
         NSLog(@"*");
         NSLog(@"*");
         NSLog(@"*");
         NSLog(@"*");
         NSLog(@"*");
         NSLog(@"*");
-
+*/
         
         Process *process_A = [allProcess objectAtIndex:i];
         
@@ -150,7 +150,7 @@ NSString* const kProcessTimes = @"times";
         }        
     }
 
-    
+    /*
     NSLog(@"*");
     NSLog(@"*");
     NSLog(@"*");
@@ -167,7 +167,7 @@ NSString* const kProcessTimes = @"times";
                   ex.durationTime);
         }
         
-    }
+    }*/
     
     for (Process *processFor in allProcess) {
         for (int j = 0; j<[processFor.exections count]; j++) {
@@ -180,7 +180,7 @@ NSString* const kProcessTimes = @"times";
             [processFor.exections setObject:exec atIndexedSubscript:j];
         }
     }
-    
+    /*
     NSLog(@"*");
     NSLog(@"*");
     NSLog(@"*");
@@ -199,8 +199,9 @@ NSString* const kProcessTimes = @"times";
         
     }
 
+    */
     
-    return nil;
+    return allProcess;
 }
                                   
 @end
