@@ -16,54 +16,6 @@ NSString* const kProcessTimes = @"times";
 
 @implementation FCFS_Algorithm
 
-+(Process *)setupProcess:(NSString*)name info:(NSDictionary *)processInfo{
-
-    
-    Process *process = [[Process alloc] init];
-    process.name =  name;
-    process.exections = [NSMutableArray array];
-    process.data = processInfo;
-
-    for (int i = 0; i < [process.exections count]; i++) {
-        //NSLog(@"i = %d",i);
-        Execution *exec = [[Execution alloc] init];
-
-        if(i % 2){
-            //NSLog(@"Impar");
-            exec.startDate = [(Execution*)[process.exections objectAtIndex:i-1] endDate];
-            exec.endDate = [exec.startDate dateByAddingTimeInterval:[[[processInfo objectForKey:kProcessTimes] objectAtIndex:i] integerValue]];
-            exec.executionType = @"E/S";
-            [process.exections addObject:exec];
-
-        }else{
-            //NSLog(@"Par");
-            
-            if (i == 0) {
-                exec.startDate = [[NSDate date]mt_startOfCurrentDay];
-                exec.endDate = [exec.startDate dateByAddingTimeInterval:[[[processInfo objectForKey:kProcessTimes] objectAtIndex:i] integerValue]];
-                exec.executionType = @"CPU";
-                //NSLog(@"Start: %@",exec.startDate);
-                //NSLog(@"End: %@", exec.endDate);
-                
-                [process.exections addObject:exec];
-            }else{
-                exec.startDate = [(Execution*)[process.exections objectAtIndex:i-1] endDate];
-                exec.endDate = [exec.startDate dateByAddingTimeInterval:[[[processInfo objectForKey:kProcessTimes] objectAtIndex:i] integerValue]];
-                exec.executionType = @"CPU";
-                [process.exections addObject:exec];
-
-            }
-        }
-    }
-    
-    NSLog(@"Process Name: %@", process.name);
-    
-    for (Execution* ex in process.exections) {
-        NSLog(@"%@ -> %@ -> %@", ex.executionType, ex.startDate, ex.endDate);
-    }
-    
-    return process;
-}
 
 
 +(Process *)setupProcessTimeWithName:(NSString*)name info:(NSDictionary *)processInfo{
