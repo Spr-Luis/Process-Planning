@@ -10,6 +10,8 @@
 #import "XLForm.h"
 #import "ProcessTimeSetupViewController.h"
 #import "ProcessManager.h"
+#import "ProcessTimelineCollectionViewController.h"
+
 
 #import "FCFS_Algorithm.h"
 
@@ -80,7 +82,7 @@
         vc.tag = [[(XLFormRowDescriptor*)sender tag] integerValue];
         
         NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
-        [center addObserverForName:[NSString stringWithFormat:@"Proceso %ld",[[(XLFormRowDescriptor*)sender tag] integerValue]+1]
+        [center addObserverForName:[NSString stringWithFormat:@"Proceso %d",[[(XLFormRowDescriptor*)sender tag] integerValue]+1]
                             object:nil
                              queue:nil
                         usingBlock:^(NSNotification *notification){
@@ -89,6 +91,9 @@
                             rowUpdate.value = [NSString stringWithFormat:@"Listo"];
                             
                         }];
+    }else if ([segue.identifier isEqualToString:@"timeline"]){
+        ProcessTimelineCollectionViewController *vc = segue.destinationViewController;
+        vc.allProcess = sender;
     }
 }
 
@@ -108,6 +113,6 @@
         
     }
     
-    [self performSegueWithIdentifier:@"timeline" sender:nil];
+    [self performSegueWithIdentifier:@"timeline" sender:allProcess];
 }
 @end

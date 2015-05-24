@@ -22,6 +22,8 @@
 #import "ISHourHeaderBackgroundView.h"
 
 #import "NSDate+MTDates.h"
+#import "Execution.h"
+#import "Process.h"
 
 
 
@@ -46,6 +48,10 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    UIImageView *backgroundImage = [[UIImageView alloc] initWithFrame:self.view.bounds];
+    backgroundImage.image = [UIImage imageNamed:@"backgroundImage"];
+    self.collectionView.backgroundView = backgroundImage;
     
     self.view.backgroundColor = [UIColor whiteColor];
     // Do any additional setup after loading the view, typically from a nib.
@@ -100,27 +106,21 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (NSDate *)collectionView:(UICollectionView *)collectionView layout:(INSElectronicProgramGuideLayout *)electronicProgramGuideLayout startTimeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSDate *today = [NSDate date];
     
-    // Get the year, month, day from the date
-    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:today];
+    Process *processSection = [self.allProcess objectAtIndex:indexPath.section];
+    Execution *Exec = [processSection.exections objectAtIndex:indexPath.row];
     
-    // Set the hour, minute, second to be zero
-    components.hour = 0;
-    components.minute = 0;
-    components.second = 0;
-    
-    // Create the date
-    NSDate *date = [[NSCalendar currentCalendar] dateFromComponents:components];
-        
-    return date;
+    return Exec.startDate;
 
 }
 
 - (NSDate *)collectionView:(UICollectionView *)collectionView layout:(INSElectronicProgramGuideLayout *)electronicProgramGuideLayout endTimeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    return [[[NSDate date] dateByAddingTimeInterval:-3600] dateByAddingTimeInterval:3600*24];
+    Process *processSection = [self.allProcess objectAtIndex:indexPath.section];
+    Execution *Exec = [processSection.exections objectAtIndex:indexPath.row];
+    
+    return Exec.endDate;
 }
 
 - (NSDate *)currentTimeForCollectionView:(UICollectionView *)collectionView layout:(INSElectronicProgramGuideLayout *)collectionViewLayout
@@ -133,7 +133,8 @@ static NSString * const reuseIdentifier = @"Cell";
     UICollectionReusableView *view;
     if (kind == INSEPGLayoutElementKindSectionHeader) {
         ISSectionHeader *dayColumnHeader = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:NSStringFromClass([ISSectionHeader class]) forIndexPath:indexPath];
-        dayColumnHeader.dayLabel.text = @"P1";
+        Process *processSection = [self.allProcess objectAtIndex:indexPath.section];
+        dayColumnHeader.dayLabel.text = processSection.name;
         view = dayColumnHeader;
     } else if (kind == INSEPGLayoutElementKindHourHeader) {
         ISHourHeader *timeRowHeader = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:NSStringFromClass([ISHourHeader class]) forIndexPath:indexPath];
@@ -150,20 +151,26 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    return 2;
+    return [self.allProcess count];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 1;
+    Process *processSection = [self.allProcess objectAtIndex:section];
+    return [processSection.exections count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     ISFloatingCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([ISFloatingCell class]) forIndexPath:indexPath];
 
-    cell.titleLabel.text = @"Titulo";
-    [cell setDate:[[NSDate date] dateByAddingTimeInterval:-3600*0.5]];
+    Process *processSection = [self.allProcess objectAtIndex:indexPath.section];
+    Execution *Exec = [processSection.exections objectAtIndex:indexPath.row];
+    
+    
+    cell.titleLabel.text = Exec.executionType;
+    
+    [cell setDate:Exec.startDate];
     
     return cell;
 }
@@ -173,6 +180,7 @@ static NSString * const reuseIdentifier = @"Cell";
 {
     
 }
+
 
 
 

@@ -114,7 +114,7 @@ NSUInteger const INSEPGLayoutMinBackgroundZ = 0.0;
 
 - (CGFloat)minuteWidth
 {
-    return self.hourWidth / 60.0;
+    return self.hourWidth / 20.0;
 }
 
 #pragma mark - NSObject

@@ -177,7 +177,7 @@ NSString* const kProcessTimes = @"times";
             NSDate *today = [NSDate date];
             
             // Get the year, month, day from the date
-            NSDateComponents *components = [[NSCalendar currentCalendar] components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:today];
+            NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:today];
             
             // Set the hour, minute, second to be zero
             components.hour = 0;
@@ -187,8 +187,8 @@ NSString* const kProcessTimes = @"times";
             // Create the date
             NSDate *date = [[NSCalendar currentCalendar] dateFromComponents:components];
             
-            exec.startDate = [date dateByAddingTimeInterval:exec.startTime];
-            exec.endDate = [exec.startDate dateByAddingTimeInterval:exec.durationTime];
+            exec.startDate = [date dateByAddingTimeInterval:exec.startTime*60*10];
+            exec.endDate = [exec.startDate dateByAddingTimeInterval:exec.durationTime*60*10];
             
             [processFor.exections setObject:exec atIndexedSubscript:j];
         }
