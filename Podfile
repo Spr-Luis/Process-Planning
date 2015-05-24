@@ -7,6 +7,7 @@ pod 'INSElectronicProgramGuideLayout'
 pod 'XLForm'
 pod 'UIColor+MLPFlatColors', '~> 1.0'
 pod 'MTDates'
+pod 'SmudgeKit'
 
 end
 

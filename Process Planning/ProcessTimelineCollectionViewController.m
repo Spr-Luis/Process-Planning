@@ -27,7 +27,9 @@
 
 
 
-@interface ProcessTimelineCollectionViewController ()<INSElectronicProgramGuideLayoutDataSource, INSElectronicProgramGuideLayoutDelegate>
+@interface ProcessTimelineCollectionViewController ()<INSElectronicProgramGuideLayoutDataSource, INSElectronicProgramGuideLayoutDelegate>{
+    NSArray *pair,*odd;
+}
 
 @property (nonatomic, weak) INSElectronicProgramGuideLayout *collectionViewEPGLayout;
 
@@ -46,9 +48,35 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 
+-(NSArray*)pairNumbers{
+    NSMutableArray *array = [NSMutableArray array];
+    
+    for (NSInteger i = 0; i < 1000; i++) {
+        if (i%2) {
+        }else{
+            [array addObject:[NSNumber numberWithInteger:i]];
+        }
+    }
+    return array;
+}
+
+-(NSArray*)oddNumbers{
+    NSMutableArray *array = [NSMutableArray array];
+    
+    for (NSInteger i = 0; i < 1000; i++) {
+        if (i%2) {
+            [array addObject:[NSNumber numberWithInteger:i]];
+        }
+    }
+    return array;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    pair = [self pairNumbers];
+    odd = [self oddNumbers];
+        
     UIImageView *backgroundImage = [[UIImageView alloc] initWithFrame:self.view.bounds];
     backgroundImage.image = [UIImage imageNamed:@"backgroundImage"];
     self.collectionView.backgroundView = backgroundImage;
@@ -131,6 +159,8 @@ static NSString * const reuseIdentifier = @"Cell";
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
 {
     UICollectionReusableView *view;
+    
+    
     if (kind == INSEPGLayoutElementKindSectionHeader) {
         ISSectionHeader *dayColumnHeader = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:NSStringFromClass([ISSectionHeader class]) forIndexPath:indexPath];
         Process *processSection = [self.allProcess objectAtIndex:indexPath.section];
@@ -138,14 +168,22 @@ static NSString * const reuseIdentifier = @"Cell";
         view = dayColumnHeader;
     } else if (kind == INSEPGLayoutElementKindHourHeader) {
         ISHourHeader *timeRowHeader = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:NSStringFromClass([ISHourHeader class]) forIndexPath:indexPath];
-        timeRowHeader.time = [self.collectionViewEPGLayout dateForHourHeaderAtIndexPath:indexPath];
+
+        NSInteger tim = [[pair objectAtIndex:indexPath.row] integerValue];
+        [timeRowHeader setTimeSec:tim];
+
+
+        
         view = timeRowHeader;
     } else if (kind == INSEPGLayoutElementKindHalfHourHeader) {
         ISHourHeader *timeRowHeader = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:NSStringFromClass([ISHourHeader class]) forIndexPath:indexPath];
-        timeRowHeader.time = [self.collectionViewEPGLayout dateForHalfHourHeaderAtIndexPath:indexPath];
+        //timeRowHeader.time = [self.collectionViewEPGLayout dateForHalfHourHeaderAtIndexPath:indexPath];
+        NSInteger tim = [[odd objectAtIndex:indexPath.row] integerValue];
+        [timeRowHeader setTimeSec:tim];
         view = timeRowHeader;
+        
     }
-    
+
     return view;
 }
 
@@ -170,8 +208,7 @@ static NSString * const reuseIdentifier = @"Cell";
     
     cell.titleLabel.text = Exec.executionType;
     
-    [cell setDate:Exec.startDate];
-    
+    [cell setDuration:Exec.durationTime];
     return cell;
 }
 

@@ -43,4 +43,9 @@
     [self setNeedsLayout];
 }
 
+-(void)setDuration:(NSInteger)duration{
+    self.dateLabel.text = [NSString stringWithFormat:@"%d ms",duration];
+    [self setNeedsDisplay];
+}
+
 @end

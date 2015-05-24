@@ -15,4 +15,5 @@
 @property (weak, nonatomic) IBOutlet UIView *leftBorderView;
 
 - (void)setDate:(NSDate *)date;
+-(void)setDuration:(NSInteger)duration;
 @end

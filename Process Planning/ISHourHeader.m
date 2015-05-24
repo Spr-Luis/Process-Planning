@@ -19,7 +19,7 @@
     static dispatch_once_t once;
     static NSDateFormatter *_sharedTimeRowHeaderDateFormatter;
     dispatch_once(&once, ^ { _sharedTimeRowHeaderDateFormatter = [[NSDateFormatter alloc] init];
-        _sharedTimeRowHeaderDateFormatter.dateFormat = @"HH:mm:ss";
+        _sharedTimeRowHeaderDateFormatter.dateFormat = @"HH:mm";
     });
     return _sharedTimeRowHeaderDateFormatter;
 }
@@ -28,9 +28,13 @@
 {
     _time = time;
 
-    self.timeLabel.text = [[[self class] sharedTimeRowHeaderDateFormatter] stringFromDate:time];
+    //self.timeLabel.text = [[[self class] sharedTimeRowHeaderDateFormatter] stringFromDate:time];
 
     [self setNeedsLayout];
 }
 
+-(void)setTimeSec:(NSInteger)time{
+    self.timeLabel.text = [NSString stringWithFormat:@"%ld ms",time];
+    [self setNeedsDisplay];
+}
 @end

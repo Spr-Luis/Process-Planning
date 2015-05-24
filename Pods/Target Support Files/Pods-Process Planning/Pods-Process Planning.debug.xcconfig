@@ -1,6 +1,6 @@
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/INSElectronicProgramGuideLayout" "${PODS_ROOT}/Headers/Public/MTDates" "${PODS_ROOT}/Headers/Public/UIColor+MLPFlatColors" "${PODS_ROOT}/Headers/Public/XLForm"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/INSElectronicProgramGuideLayout" -isystem "${PODS_ROOT}/Headers/Public/MTDates" -isystem "${PODS_ROOT}/Headers/Public/UIColor+MLPFlatColors" -isystem "${PODS_ROOT}/Headers/Public/XLForm"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"Pods-Process Planning-INSElectronicProgramGuideLayout" -l"Pods-Process Planning-MTDates" -l"Pods-Process Planning-UIColor+MLPFlatColors" -l"Pods-Process Planning-XLForm" -framework "CoreGraphics" -framework "Foundation" -framework "UIKit"
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/INSElectronicProgramGuideLayout" "${PODS_ROOT}/Headers/Public/MTDates" "${PODS_ROOT}/Headers/Public/SmudgeKit" "${PODS_ROOT}/Headers/Public/UIColor+MLPFlatColors" "${PODS_ROOT}/Headers/Public/XLForm"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/INSElectronicProgramGuideLayout" -isystem "${PODS_ROOT}/Headers/Public/MTDates" -isystem "${PODS_ROOT}/Headers/Public/SmudgeKit" -isystem "${PODS_ROOT}/Headers/Public/UIColor+MLPFlatColors" -isystem "${PODS_ROOT}/Headers/Public/XLForm"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"Pods-Process Planning-INSElectronicProgramGuideLayout" -l"Pods-Process Planning-MTDates" -l"Pods-Process Planning-SmudgeKit" -l"Pods-Process Planning-UIColor+MLPFlatColors" -l"Pods-Process Planning-XLForm" -framework "CoreGraphics" -framework "Foundation" -framework "UIKit"
 OTHER_LIBTOOLFLAGS = $(OTHER_LDFLAGS)
 PODS_ROOT = ${SRCROOT}/Pods

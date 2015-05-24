@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B3EE87F0AC9790B78CFAA499"
+               BlueprintIdentifier = "094EE3077E720B82B033BBD4"
                BuildableName = "libPods-Process Planning-UIColor+MLPFlatColors.a"
                BlueprintName = "Pods-Process Planning-UIColor+MLPFlatColors"
                ReferencedContainer = "container:Pods.xcodeproj">

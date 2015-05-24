@@ -1,18 +1,21 @@
 PODS:
   - INSElectronicProgramGuideLayout (1.1.0)
   - MTDates (1.0.2)
+  - SmudgeKit (0.1.2)
   - UIColor+MLPFlatColors (1.0)
   - XLForm (2.2.0)
 
 DEPENDENCIES:
   - INSElectronicProgramGuideLayout
   - MTDates
+  - SmudgeKit
   - UIColor+MLPFlatColors (~> 1.0)
   - XLForm
 
 SPEC CHECKSUMS:
   INSElectronicProgramGuideLayout: eef4f7ab59fdad29fff38bfffd851631779e364c
   MTDates: aa8006ac046c3fc4f2bb9df95603e9b5bdac9467
+  SmudgeKit: d605782fc87271803b32c3fac6e9d6a2963f6ee8
   UIColor+MLPFlatColors: 14deb8f28da06ab8918c14231d4ff49ca7cd384a
   XLForm: 799e61ef230f519914e722bf032b19a597223c19
 

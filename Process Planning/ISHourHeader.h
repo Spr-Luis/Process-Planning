@@ -10,4 +10,5 @@
 
 @interface ISHourHeader : UICollectionReusableView
 @property (nonatomic, strong) NSDate *time;
+-(void)setTimeSec:(NSInteger)time;
 @end

@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-Process Planning-SmudgeKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Process Planning-UIColor+MLPFlatColors.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,27 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>6066D6A30CB3C87BCF8C3960</key>
+		<key>094EE3077E720B82B033BBD4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8730E883CB6C6FA4E479D10B</key>
+		<key>0E329E14AC3DE93E97666651</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AAB98E01395028B9D21E89A1</key>
+		<key>2FE7A250E5D5C15B1ED4C3F3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B14126B0F7E04E93B8572526</key>
+		<key>7805CF359D4FC5BA6E363FD0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B3EE87F0AC9790B78CFAA499</key>
+		<key>B97D15659D31B29ED30328C6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FAB5FF79241999E83640A8A4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

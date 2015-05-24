@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AAB98E01395028B9D21E89A1"
+               BlueprintIdentifier = "7805CF359D4FC5BA6E363FD0"
                BuildableName = "libPods-Process Planning-XLForm.a"
                BlueprintName = "Pods-Process Planning-XLForm"
                ReferencedContainer = "container:Pods.xcodeproj">

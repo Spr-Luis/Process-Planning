@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B14126B0F7E04E93B8572526"
+               BlueprintIdentifier = "B97D15659D31B29ED30328C6"
                BuildableName = "libPods-Process Planning-INSElectronicProgramGuideLayout.a"
                BlueprintName = "Pods-Process Planning-INSElectronicProgramGuideLayout"
                ReferencedContainer = "container:Pods.xcodeproj">

@@ -96,7 +96,7 @@
                                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="S1p-t6-fYd">
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="S1p-t6-fYd">
                                                 <rect key="frame" x="8" y="393" width="584" height="29"/>
                                                 <segments>
                                                     <segment title="Instante cero"/>
@@ -298,10 +298,10 @@
             </objects>
             <point key="canvasLocation" x="3242" y="325"/>
         </scene>
-        <!--Process Timeline Collection View Controller-->
+        <!--Linea de Tiempo-->
         <scene sceneID="LYo-ld-G1q">
             <objects>
-                <collectionViewController id="rd6-ez-tWS" customClass="ProcessTimelineCollectionViewController" sceneMemberID="viewController">
+                <collectionViewController title="Linea de Tiempo" id="rd6-ez-tWS" customClass="ProcessTimelineCollectionViewController" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="3mo-aX-353">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
