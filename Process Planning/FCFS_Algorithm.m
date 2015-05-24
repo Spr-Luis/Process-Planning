@@ -112,7 +112,7 @@ NSString* const kProcessTimes = @"times";
     NSLog(@"Process Name: %@", process.name);
     
     for (Execution* ex in process.exections) {
-        NSLog(@"%@ ::: %d -> %d ::: %d", ex.executionType, ex.startTime, ex.endTime,ex.durationTime);
+        NSLog(@"%@ ::: %ld -> %ld ::: %ld", ex.executionType, (long)ex.startTime, (long)ex.endTime,(long)ex.durationTime);
     }
     
     return process; 
@@ -147,20 +147,22 @@ NSString* const kProcessTimes = @"times";
                 if (k != 0) {
         
                     if ([((Execution*)[process_A.exections objectAtIndex:k]).executionType isEqualToString:@"CPU"] && k >=2) {
-                        
+                        /*
+                         * Aqui Sol:
+                         */
                         if (((Execution*)[process_A.exections objectAtIndex:k-1]).endTime < ((Execution*)[process_B.exections objectAtIndex:k-2]).endTime){
                             ((Execution*)[process_A.exections objectAtIndex:k]).startTime = ((Execution*)[process_B.exections objectAtIndex:k-2]).endTime;
                             ((Execution*)[process_A.exections objectAtIndex:k]).endTime = ((Execution*)[process_A.exections objectAtIndex:k]).startTime +((Execution*)[process_A.exections objectAtIndex:k]).durationTime;
 
+                        }else if (((Execution*)[process_A.exections objectAtIndex:k-1]).endTime == ((Execution*)[process_B.exections objectAtIndex:k-2]).endTime){
+                        
+                            ((Execution*)[process_A.exections objectAtIndex:k]).startTime = ((Execution*)[process_B.exections objectAtIndex:k-1]).endTime;
+                            ((Execution*)[process_A.exections objectAtIndex:k]).endTime = ((Execution*)[process_A.exections objectAtIndex:k]).startTime +((Execution*)[process_A.exections objectAtIndex:k]).durationTime;
+                            
                         }else{
                             ((Execution*)[process_A.exections objectAtIndex:k]).startTime = ((Execution*)[process_A.exections objectAtIndex:k-1]).endTime;
                             ((Execution*)[process_A.exections objectAtIndex:k]).endTime = ((Execution*)[process_A.exections objectAtIndex:k]).startTime +((Execution*)[process_A.exections objectAtIndex:k]).durationTime;
                         }
-                        
-                        /*
-                        ((Execution*)[process_A.exections objectAtIndex:k]).startTime = ((Execution*)[process_B.exections objectAtIndex:k-2]).endTime;
-                        ((Execution*)[process_A.exections objectAtIndex:k]).endTime = ((Execution*)[process_A.exections objectAtIndex:k]).startTime +((Execution*)[process_A.exections objectAtIndex:k]).durationTime;
-                         */
                     }
                 
                 }
@@ -193,8 +195,7 @@ NSString* const kProcessTimes = @"times";
             }
             
             
-        }
-        
+        }        
     }
 
     
