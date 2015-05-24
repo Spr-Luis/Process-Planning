@@ -19,7 +19,7 @@
     static dispatch_once_t once;
     static NSDateFormatter *_sharedTimeRowHeaderDateFormatter;
     dispatch_once(&once, ^ { _sharedTimeRowHeaderDateFormatter = [[NSDateFormatter alloc] init];
-        _sharedTimeRowHeaderDateFormatter.dateFormat = @"HH:mm";
+        _sharedTimeRowHeaderDateFormatter.dateFormat = @"HH:mm:ss";
     });
     return _sharedTimeRowHeaderDateFormatter;
 }

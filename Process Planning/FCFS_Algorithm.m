@@ -174,7 +174,20 @@ NSString* const kProcessTimes = @"times";
             
             Execution* exec = [processFor.exections objectAtIndex:j];
             
-            exec.startDate = [[[NSDate date]mt_startOfCurrentDay] dateByAddingTimeInterval:exec.startTime];
+            NSDate *today = [NSDate date];
+            
+            // Get the year, month, day from the date
+            NSDateComponents *components = [[NSCalendar currentCalendar] components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:today];
+            
+            // Set the hour, minute, second to be zero
+            components.hour = 0;
+            components.minute = 0;
+            components.second = 0;
+            
+            // Create the date
+            NSDate *date = [[NSCalendar currentCalendar] dateFromComponents:components];
+            
+            exec.startDate = [date dateByAddingTimeInterval:exec.startTime];
             exec.endDate = [exec.startDate dateByAddingTimeInterval:exec.durationTime];
             
             [processFor.exections setObject:exec atIndexedSubscript:j];

@@ -100,13 +100,27 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (NSDate *)collectionView:(UICollectionView *)collectionView layout:(INSElectronicProgramGuideLayout *)electronicProgramGuideLayout startTimeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [[NSDate date] dateByAddingTimeInterval:-3600*24];
+    NSDate *today = [NSDate date];
+    
+    // Get the year, month, day from the date
+    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:today];
+    
+    // Set the hour, minute, second to be zero
+    components.hour = 0;
+    components.minute = 0;
+    components.second = 0;
+    
+    // Create the date
+    NSDate *date = [[NSCalendar currentCalendar] dateFromComponents:components];
+        
+    return date;
+
 }
 
 - (NSDate *)collectionView:(UICollectionView *)collectionView layout:(INSElectronicProgramGuideLayout *)electronicProgramGuideLayout endTimeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    return [[[NSDate date] dateByAddingTimeInterval:-3600*24] dateByAddingTimeInterval:3600*72];
+    return [[[NSDate date] dateByAddingTimeInterval:-3600] dateByAddingTimeInterval:3600*24];
 }
 
 - (NSDate *)currentTimeForCollectionView:(UICollectionView *)collectionView layout:(INSElectronicProgramGuideLayout *)collectionViewLayout
@@ -136,12 +150,12 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    return 1;
+    return 2;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 2;
+    return 1;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -149,7 +163,7 @@ static NSString * const reuseIdentifier = @"Cell";
     ISFloatingCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([ISFloatingCell class]) forIndexPath:indexPath];
 
     cell.titleLabel.text = @"Titulo";
-    [cell setDate:[[NSDate date]mt_startOfCurrentDay]];
+    [cell setDate:[[NSDate date] dateByAddingTimeInterval:-3600*0.5]];
     
     return cell;
 }

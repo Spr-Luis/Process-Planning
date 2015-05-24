@@ -589,10 +589,11 @@ NSUInteger const INSEPGLayoutMinBackgroundZ = 0.0;
 
         NSIndexPath *hourHeaderIndexPath = [NSIndexPath indexPathForItem:verticalGridlineIndex inSection:0];
 
-        CGFloat hourTimeInterval = 3600;
+        CGFloat hourTimeInterval = 3600/3;
         if (![self.cachedHours objectForKey:hourHeaderIndexPath]) {
             [self.cachedHours setObject:[startDate dateByAddingTimeInterval: hourTimeInterval * verticalGridlineIndex] forKey:hourHeaderIndexPath];
         }
+        
 
         UICollectionViewLayoutAttributes *hourHeaderAttributes = [self layoutAttributesForSupplementaryViewAtIndexPath:hourHeaderIndexPath ofKind:INSEPGLayoutElementKindHourHeader withItemCache:self.hourHeaderAttributes];
         CGFloat hourHeaderMinX = hourX - nearbyintf(self.hourWidth / 2.0);
@@ -613,7 +614,7 @@ NSUInteger const INSEPGLayoutMinBackgroundZ = 0.0;
 
         NSIndexPath *halfHourHeaderIndexPath = [NSIndexPath indexPathForItem:verticalHalfHourGridlineIndex inSection:0];
 
-        CGFloat hourTimeInterval = 3600;
+        CGFloat hourTimeInterval = 3600/3;
         if (![self.cachedHalfHours objectForKey:halfHourHeaderIndexPath]) {
             [self.cachedHalfHours setObject:[startDate dateByAddingTimeInterval:hourTimeInterval * verticalHalfHourGridlineIndex + hourTimeInterval/2] forKey:halfHourHeaderIndexPath];
         }
