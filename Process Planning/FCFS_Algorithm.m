@@ -16,7 +16,7 @@ NSString* const kProcessTimes = @"times";
 
 @implementation FCFS_Algorithm
 
-+(Process *)setupProcessDateWithName:(NSString*)name info:(NSDictionary *)processInfo{
++(Process *)setupProcess:(NSString*)name info:(NSDictionary *)processInfo{
 
     
     Process *process = [[Process alloc] init];
@@ -24,7 +24,7 @@ NSString* const kProcessTimes = @"times";
     process.exections = [NSMutableArray array];
     process.data = processInfo;
 
-    for (int i = 0; i < [[processInfo objectForKey:kProcessTimes] count]; i++) {
+    for (int i = 0; i < [process.exections count]; i++) {
         //NSLog(@"i = %d",i);
         Execution *exec = [[Execution alloc] init];
 
@@ -184,6 +184,7 @@ NSString* const kProcessTimes = @"times";
                         ((Execution*)[process_B.exections objectAtIndex:k]).endTime = ((Execution*)[process_B.exections objectAtIndex:k]).startTime +((Execution*)[process_B.exections objectAtIndex:k]).durationTime;
                 }
                 
+                /*
                 NSLog(@"i: %d --- k: %d",i,k);
                 
                 NSLog(@"Process A: %@",process_A.name);
@@ -191,7 +192,7 @@ NSString* const kProcessTimes = @"times";
                 
                 NSLog(@"Process B: %@",process_B.name);
                 NSLog(@"%@ ::: %ld -> %ld ::: %ld",((Execution*)[process_B.exections objectAtIndex:k]).executionType, (long)((Execution*)[process_B.exections objectAtIndex:k]).startTime,(long)((Execution*)[process_B.exections objectAtIndex:k]).endTime, (long)((Execution*)[process_B.exections objectAtIndex:k]).durationTime);
-                
+                */
             }
             
             
@@ -216,6 +217,37 @@ NSString* const kProcessTimes = @"times";
         }
         
     }
+    
+    for (Process *processFor in allProcess) {
+        for (int j = 0; j<[processFor.exections count]; j++) {
+            
+            Execution* exec = [processFor.exections objectAtIndex:j];
+            
+            exec.startDate = [[[NSDate date]mt_startOfCurrentDay] dateByAddingTimeInterval:exec.startTime];
+            exec.endDate = [exec.startDate dateByAddingTimeInterval:exec.durationTime];
+            
+            [processFor.exections setObject:exec atIndexedSubscript:j];
+        }
+    }
+    
+    NSLog(@"*");
+    NSLog(@"*");
+    NSLog(@"*");
+    NSLog(@"*");
+    NSLog(@"*");
+    NSLog(@"*");
+    
+    for (Process *proc in allProcess) {
+        
+        NSLog(@"Process Name: %@", proc.name);
+        
+        for (Execution* ex in proc.exections) {
+            NSLog(@"%@ ::: %@ -> %@ ::: %ld", ex.executionType, ex.startDate, ex.endDate,(long)
+                  ex.durationTime);
+        }
+        
+    }
+
     
     return nil;
 }
