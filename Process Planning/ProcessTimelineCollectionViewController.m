@@ -21,6 +21,9 @@
 #import "ISFloatingCell.h"
 #import "ISHourHeaderBackgroundView.h"
 
+#import "NSDate+MTDates.h"
+
+
 
 @interface ProcessTimelineCollectionViewController ()<INSElectronicProgramGuideLayoutDataSource, INSElectronicProgramGuideLayoutDelegate>
 
@@ -93,17 +96,17 @@ static NSString * const reuseIdentifier = @"Cell";
     // Pass the selected object to the new view controller.
 }
 */
-/*
+
+
 - (NSDate *)collectionView:(UICollectionView *)collectionView layout:(INSElectronicProgramGuideLayout *)electronicProgramGuideLayout startTimeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    Entry *entry = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    return entry.startDate;
+    return [[NSDate date] dateByAddingTimeInterval:-3600*24];
 }
 
 - (NSDate *)collectionView:(UICollectionView *)collectionView layout:(INSElectronicProgramGuideLayout *)electronicProgramGuideLayout endTimeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    Entry *entry = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    return entry.endDate;
+    
+    return [[[NSDate date] dateByAddingTimeInterval:-3600*24] dateByAddingTimeInterval:3600*72];
 }
 
 - (NSDate *)currentTimeForCollectionView:(UICollectionView *)collectionView layout:(INSElectronicProgramGuideLayout *)collectionViewLayout
@@ -116,9 +119,7 @@ static NSString * const reuseIdentifier = @"Cell";
     UICollectionReusableView *view;
     if (kind == INSEPGLayoutElementKindSectionHeader) {
         ISSectionHeader *dayColumnHeader = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:NSStringFromClass([ISSectionHeader class]) forIndexPath:indexPath];
-        Entry *entry = [self.fetchedResultsController objectAtIndexPath:indexPath];
-        
-        dayColumnHeader.dayLabel.text = entry.channel.name;
+        dayColumnHeader.dayLabel.text = @"P1";
         view = dayColumnHeader;
     } else if (kind == INSEPGLayoutElementKindHourHeader) {
         ISHourHeader *timeRowHeader = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:NSStringFromClass([ISHourHeader class]) forIndexPath:indexPath];
@@ -135,20 +136,20 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    return [self.fetchedResultsController.sections count];
+    return 1;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return [[[self.fetchedResultsController sections] objectAtIndex:section] numberOfObjects];
+    return 2;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     ISFloatingCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass([ISFloatingCell class]) forIndexPath:indexPath];
-    Entry *entry = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.titleLabel.text = entry.title;
-    [cell setDate:entry.startDate];
+
+    cell.titleLabel.text = @"Titulo";
+    [cell setDate:[[NSDate date]mt_startOfCurrentDay]];
     
     return cell;
 }
@@ -158,7 +159,7 @@ static NSString * const reuseIdentifier = @"Cell";
 {
     
 }
-*/
+
 
 
 @end

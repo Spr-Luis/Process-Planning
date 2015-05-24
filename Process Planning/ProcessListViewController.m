@@ -107,5 +107,7 @@
         }
         
     }
+    
+    [self performSegueWithIdentifier:@"timeline" sender:nil];
 }
 @end

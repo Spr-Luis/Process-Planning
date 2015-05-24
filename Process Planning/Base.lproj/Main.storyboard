@@ -251,6 +251,7 @@
                         <outlet property="doneProcessButton" destination="XAG-AQ-zfE" id="Ycl-zf-1W9"/>
                         <outlet property="tableView" destination="S20-hv-h1F" id="GOG-Pr-BAf"/>
                         <segue destination="OOS-3t-5Fy" kind="show" identifier="processTimeSetup" id="6ew-7R-q8L"/>
+                        <segue destination="rd6-ez-tWS" kind="show" identifier="timeline" id="LQ7-hV-bG3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zad-Q9-wDN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -291,17 +292,16 @@
                     </navigationItem>
                     <connections>
                         <outlet property="saveButton" destination="k3n-XQ-rNU" id="PAu-cf-zDY"/>
-                        <segue destination="rd6-ez-tWS" kind="show" id="tUJ-bZ-n9k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I8t-3a-cKi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3242" y="325"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--Process Timeline Collection View Controller-->
         <scene sceneID="LYo-ld-G1q">
             <objects>
-                <collectionViewController id="rd6-ez-tWS" sceneMemberID="viewController">
+                <collectionViewController id="rd6-ez-tWS" customClass="ProcessTimelineCollectionViewController" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="3mo-aX-353">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -316,7 +316,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yMU-gX-Lnf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3946" y="325"/>
+            <point key="canvasLocation" x="2551" y="-339"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mUq-Sf-YX7">
